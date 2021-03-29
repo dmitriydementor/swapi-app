@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  margin: 20px 0;
+
+  .characters-filter {
+    width: 300px;
+    padding-right: 20px;
+  }
+
+  .characters-list {
+    flex: 1 1 auto;
+  }
+}

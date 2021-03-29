@@ -1,0 +1,24 @@
+<form [formGroup]="form">
+  <div class="form-control">
+    <label for="filmControl" class="form-control__label">Film</label>
+    <select formControlName="film" id="filmControl" class="form-control__input">
+      <option value="All">All</option>
+      <option *ngFor="let f of films" [value]="f.title">{{ f.title }}</option>
+    </select>
+  </div>
+
+  <div class="form-control">
+    <label for="spieceControl" class="form-control__label">Spiece</label>
+    <select formControlName="spiece" id="spieceControl" class="form-control__input">
+      <option value="All">All</option>
+      <option *ngFor="let s of species" [value]="s.name">{{ s.name }}</option>
+    </select>
+  </div>
+
+  <div class="form-control">
+    <label for="birthYearControl" class="form-control__label">Birth Year from 0 to {{ form.controls.birthYear.value }}</label>
+    <input type="range" id="birthYearControl" class="form-control__input" formControlName="birthYear" min="0" max="600">
+  </div>
+
+
+</form>

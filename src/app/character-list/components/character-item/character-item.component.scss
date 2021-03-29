@@ -1,0 +1,43 @@
+:host {
+  display: block;
+}
+
+.character-item {
+  background-color: #5d6161;
+  color: white;
+  padding: 20px;
+
+  &__name {
+    font-size: 1.3rem;
+  }
+
+  &__info {
+    display: flex;
+  }
+
+  &__properties, &__colors {
+    flex: 1;
+  }
+
+  &__property-name, &__property-value {
+    margin: 0;
+  }
+
+  &__property-name {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  &__property-value {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.character-color {
+  display: inline-block;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}

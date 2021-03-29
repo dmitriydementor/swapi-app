@@ -1,0 +1,36 @@
+<div class="character-item">
+  <a class="character-item__name" [routerLink]="[character?.url | slice:character?.url?.length - 2]">{{ character?.name }}</a>
+
+  <section class="character-item__info">
+    <dl class="character-item__properties">
+      <dt class="character-item__property-name">Height</dt>
+      <dd class="character-item__property-value">{{ character?.height }}</dd>
+
+      <dt class="character-item__property-name">Mass</dt>
+      <dd class="character-item__property-value">{{ character?.mass }}</dd>
+
+      <dt class="character-item__property-name">Gender</dt>
+      <dd class="character-item__property-value">{{ character?.gender }}</dd>
+
+      <dt class="character-item__property-name">Birth Year</dt>
+      <dd class="character-item__property-value">{{ character?.birth_year }}</dd>
+    </dl>
+
+    <dl class="character-item__colors">
+      <dt class="character-item__property-name">Hair color</dt>
+      <dd class="character-item__property-value">
+        <span *ngFor="let color of character?.hair_color | swColor" class="character-color" [style.background-color]="color"></span>
+      </dd>
+
+      <dt class="character-item__property-name">Skin color</dt>
+      <dd class="character-item__property-value">
+        <span *ngFor="let color of character?.skin_color | swColor" class="character-color" [style.background-color]="color"></span>
+      </dd>
+
+      <dt class="character-item__property-name">Eye color</dt>
+      <dd class="character-item__property-value">
+        <span *ngFor="let color of character?.eye_color | swColor" class="character-color" [style.background-color]="color"></span>
+      </dd>
+    </dl>
+  </section>
+</div>

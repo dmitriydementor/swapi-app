@@ -1,0 +1,11 @@
+.header {
+  background-color: #222222;
+  padding: 15px;
+  .navbar {
+    &__link {
+      text-decoration: none;
+      color: white;
+      font-size: 1.2rem;
+    }
+  }
+}

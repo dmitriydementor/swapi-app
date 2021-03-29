@@ -1,0 +1,10 @@
+<section class="pagination">
+  <button (click)="previous()" [disabled]="!previousPage">Previous page</button>
+  <button (click)="next()" [disabled]="!nextPage">Next page</button>
+</section>
+
+<p *ngIf="charactersLoading">Loading</p>
+
+<section class="character-items">
+  <app-character-item *ngFor="let c of characters | characterFilter:filter:films:species" [character]="c"></app-character-item>
+</section>

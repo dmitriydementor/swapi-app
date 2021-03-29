@@ -1,0 +1,21 @@
+<aside class="characters-filter">
+  <app-character-filter
+    [films]="films$ | async"
+    [species]="species$ | async"
+    (filterChange)="onFilterChange($event)">
+  </app-character-filter>
+</aside>
+
+<section class="characters-list">
+  <app-character-list
+    [charactersLoading]="charactersLoading$ | async"
+    [characters]="characters$ | async"
+    [filter]="filter$ | async"
+    [films]="films$ | async"
+    [species]="species$ | async"
+    [nextPage]="nextPage$ | async"
+    [previousPage]="previousPage$ | async"
+    (onPrevious)="onPrevious()"
+    (onNext)="onNext()">
+  </app-character-list>
+</section>
